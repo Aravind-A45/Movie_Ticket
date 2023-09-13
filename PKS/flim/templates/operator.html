@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Bus App</title>  <style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        background-color: violet;
+    }
+
+    #content {
+        text-align: center;
+        font-size: 24px;
+    }
+</style>
+
+</head>
+<body>
+  <form method="post">
+    {% csrf_token %}
+    <table>
+      <tr>
+        <td>
+          Operator_id :
+        </td>
+        <td>
+          <input type="number" placeholder="Operator_id" name="Opid">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Operator_name :
+        </td>
+        <td>
+          <input type="text" placeholder="Operator_name" name="Opn"> 
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Contact_number :
+        </td>
+        <td>
+          <input type="number" placeholder="Contact_number" name="Cno"> 
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Address :
+        </td>
+        <td>
+          <input type="text" placeholder="Address" name="Adr"> 
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="submit" name="submit" value="POST">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
