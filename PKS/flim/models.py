@@ -10,12 +10,18 @@ class Operator(models.Model):
     Contact_number = models.CharField(max_length=20)
     Address = models.CharField(max_length=255)
 
+    def __str__(self):
+        return self.Operator_name
+
 class Bus(models.Model):
     Bus_id=models.PositiveIntegerField()
     Bus_name = models.CharField(max_length=255)
     Total_seats = models.PositiveIntegerField()
     Bus_type = models.CharField(max_length=255)
     Operator_name = models.ForeignKey(Operator, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.Bus_name
 
 
 class Route(models.Model):
@@ -24,14 +30,18 @@ class Route(models.Model):
     Destination_city = models.CharField(max_length=255)
     Distance = models.DecimalField(max_digits=10, decimal_places=2)
 
+    
+
 class BusSchedule(models.Model):
     Schedule_id=models.PositiveIntegerField()
     Bus_id = models.ForeignKey(Bus, on_delete=models.CASCADE)
     Route_id = models.ForeignKey(Route, on_delete=models.CASCADE)
-    Departure_time = models.DateTimeField()
-    Arrival_time = models.DateTimeField()
+    Departure_time = models.TimeField()
+    Arrival_time = models.TimeField()
     Price = models.DecimalField(max_digits=10, decimal_places=2)
     Available_seats = models.PositiveIntegerField()
+
+    
 
 
 class Booking(models.Model):
@@ -40,6 +50,8 @@ class Booking(models.Model):
     Schedule_id = models.ForeignKey(BusSchedule, on_delete=models.CASCADE)
     Booking_date = models.DateTimeField(auto_now_add=True)
     No_of_tickets = models.PositiveIntegerField()
+
+    
 
 
 
@@ -50,6 +62,8 @@ class Payment(models.Model):
     Amount = models.DecimalField(max_digits=10, decimal_places=2)
     Payment_status = models.CharField(max_length=255)
 
+    
+
 
 class SeatReservation(models.Model):
     Reservation_id=models.PositiveIntegerField()
@@ -57,10 +71,13 @@ class SeatReservation(models.Model):
     Seat_number = models.PositiveIntegerField()
     Is_reserved = models.BooleanField(default=False)
 
+    
+
 
 class ReviewAndRating(models.Model):
-    User_id = models.ForeignKey(Booking, on_delete=models.CASCADE)
     Bus_id = models.ForeignKey(Bus, on_delete=models.CASCADE)
     Rating = models.PositiveIntegerField()
     Review_text = models.TextField()
     Review_date = models.DateTimeField(auto_now_add=True)
+
+    
