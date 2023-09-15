@@ -4,26 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Red Bus App</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 10vh;
-      background-color: rgb(239, 239, 250);
-  }
-  
-  #content {
-      text-align: center;
-      font-size: 24px;
-  }
-  </style>
 </head>
-<body>
+<body bgcolor="cyan">
   <h1>Welcome to {{name}}</h1>
-  <a href="{% url 'home' %}">Home</a> /
-  <a href="{% url 'login' %}">Login</a>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="login">Login</a></li>
+            <li><a href="operator">Operator</a></li>
+            <li><a href="bus_details">Bus details</a></li>
+            <li><a href="route_details">Route Details</a></li>
+            <li><a href="bus_schedule">Bus Schedule</a></li>
+            <li><a href="book">Booking</a></li>
+            <li><a href="pay">Payment</a></li>
+            <li><a href="reser">Seat Reservation</a></li>
+            <li><a href="review">Review and Rating</a></li>
+        </ul>
+    </nav>
+  </header>
 </body>
 </html>

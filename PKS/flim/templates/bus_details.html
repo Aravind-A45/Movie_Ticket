@@ -3,25 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Red Bus App</title>  <style>
-    body {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50vh;
-        background-color: violet;
-    }
-
-    #content {
-        text-align: center;
-        font-size: 24px;
-    }
-</style>
-
+  <title>Red Bus App</title>  
 </head>
-<body>
+<body bgcolor="cyan">
+  <h1>BUS DETAILS</h1>
+  <li>01-SKK-75-semisleeper</li>
+  <li>02-GTT-75-semisleeper</li>
+  <li>03-RSS-75-semisleeper</li>
   <form method="post">
     {% csrf_token %}
     <table>
@@ -30,7 +18,7 @@
           Bus_id :
         </td>
         <td>
-          <input type="number" placeholder="Bus_id" name="Bid">
+          <input type="number" placeholder="Bus_id" name="Bus_id">
         </td>
       </tr>
       <tr>
@@ -54,7 +42,7 @@
           Bus_type :
         </td>
         <td>
-          <input type="text" placeholder="Bus_type" name="Bus_type"> 
+          <input type="text" placeholder="Bus_type" name="Btype"> 
         </td>
       </tr>
       <tr>
@@ -62,7 +50,7 @@
           Operator_name :
         </td>
         <td>
-          <input type="text" placeholder="Operator_name" name="Opn"> 
+          <input type="text" placeholder="Operator_name" name="Operator_name"> 
         </td>
       </tr>
       <tr>

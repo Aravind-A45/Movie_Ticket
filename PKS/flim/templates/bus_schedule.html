@@ -3,25 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Red Bus App</title>  <style>
-    body {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50vh;
-        background-color: violet;
-    }
-
-    #content {
-        text-align: center;
-        font-size: 24px;
-    }
-</style>
-
+  <title>Red Bus App</title>  
 </head>
-<body>
+<body bgcolor="cyan">
+  <h1>BUS SCHEDULES</h1>
+  <li>01-09.00AM-12.00PM-RS.300-75</li>
+  <li>02-12.00PM-03.00PM-RS.300-75</li>
+  <li>03-03.00PM-06.00PM-RS.300-75</li>
+  <li>04-06.00PM-09.00PM-RS.300-75</li>
   <form method="post">
     {% csrf_token %}
     <table>
@@ -30,7 +19,7 @@
           Schedule_id :
         </td>
         <td>
-          <input type="number" placeholder="Schedule_id" name="Sid">
+          <input type="number" placeholder="Schedule_id" name="Schedule_id">
         </td>
       </tr>
       <tr>
@@ -38,7 +27,7 @@
           Bus_id :
         </td>
         <td>
-          <input type="number" placeholder="Bus_id" name="Bid"> 
+          <input type="number" placeholder="Bus_id" name="Bus_id"> 
         </td>
       </tr>
       <tr>
@@ -46,7 +35,7 @@
           Route_id :
         </td>
         <td>
-          <input type="number" placeholder="Route_id" name="Rid"> 
+          <input type="number" placeholder="Route_id" name="Route_id"> 
         </td>
       </tr>
       <tr>
@@ -54,7 +43,7 @@
           Departure_time :
         </td>
         <td>
-          <input type="time" placeholder="Departure_time" name="Dtime"> 
+          <input type="time" placeholder="Departure_time" name="Departure_time"> 
         </td>
       </tr>
       <tr>
@@ -62,7 +51,7 @@
           Arrival_time :
         </td>
         <td>
-          <input type="time" placeholder="Arrival_time" name="Atime"> 
+          <input type="time" placeholder="Arrival_time" name="Arrival_time"> 
         </td>
       </tr>
       <tr>
@@ -70,7 +59,7 @@
           Price :
         </td>
         <td>
-          <input type="number" placeholder="Price" name="Pr"> 
+          <input type="number" placeholder="Price" name="Price"> 
         </td>
       </tr>
       <tr>
@@ -78,7 +67,7 @@
           Available_seats :
         </td>
         <td>
-          <input type="number" placeholder="Available_seats" name="Aseat"> 
+          <input type="number" placeholder="Available_seats" name="Available_seats"> 
         </td>
       </tr>
       <tr>

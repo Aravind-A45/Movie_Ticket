@@ -21,8 +21,12 @@
 </style>
 
 </head>
-<body>
+<body bgcolor="cyan">
   <form method="post">
+    <h1></h1>
+    <li>I01-Ramesh-9789678909-gandhi_street</li>
+    <li>I02-Ravi-9789678910-nehru_street</li>
+    <li>I03-Vicky-9789678911-bose_street</li>
     {% csrf_token %}
     <table>
       <tr>
@@ -30,7 +34,7 @@
           Booking_id :
         </td>
         <td>
-          <input type="number" placeholder="Booking_id" name="Bookid">
+          <input type="number" placeholder="Booking_id" name="Booking_id">
         </td>
       </tr>
       <tr>
@@ -38,7 +42,7 @@
           User_id :
         </td>
         <td>
-          <input type="number" placeholder="User_id" name="Uid"> 
+          <input type="number" placeholder="User_id" name="User_id"> 
         </td>
       </tr>
       <tr>
@@ -46,7 +50,7 @@
           Schedule_id :
         </td>
         <td>
-          <input type="number" placeholder="Schedule_id" name="Sid"> 
+          <input type="number" placeholder="Schedule_id" name="Schedule_id"> 
         </td>
       </tr>
       <tr>
@@ -54,7 +58,7 @@
           Booking_date :
         </td>
         <td>
-          <input type="date" placeholder="Booking_date" name="Bdate"> 
+          <input type="date" placeholder="Booking_date" name="Booking_date"> 
         </td>
       </tr>
       <tr>
@@ -62,7 +66,7 @@
           No_of_tickets :
         </td>
         <td>
-          <input type="number" placeholder="No_of_tickets" name="No_tic"> 
+          <input type="number" placeholder="No_of_tickets" name="No_of_tickets"> 
         </td>
       </tr>
       <tr>

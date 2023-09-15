@@ -17,7 +17,6 @@ class Bus(models.Model):
     Bus_type = models.CharField(max_length=255)
     Operator_name = models.ForeignKey(Operator, on_delete=models.CASCADE)
 
-
 class Route(models.Model):
     Route_id=models.PositiveIntegerField()
     Source_city = models.CharField(max_length=255)
@@ -28,8 +27,8 @@ class BusSchedule(models.Model):
     Schedule_id=models.PositiveIntegerField()
     Bus_id = models.ForeignKey(Bus, on_delete=models.CASCADE)
     Route_id = models.ForeignKey(Route, on_delete=models.CASCADE)
-    Departure_time = models.DateTimeField()
-    Arrival_time = models.DateTimeField()
+    Departure_time = models.TimeField()
+    Arrival_time = models.TimeField()
     Price = models.DecimalField(max_digits=10, decimal_places=2)
     Available_seats = models.PositiveIntegerField()
 

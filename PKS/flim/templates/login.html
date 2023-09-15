@@ -4,47 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Red Bus App</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 10vh;
-      background-color: rgb(239, 239, 250);
-  }
-  
-  #content {
-      text-align: center;
-      font-size: 24px;
-  }
-  </style>
 </head>
-<body>
+<body bgcolor="cyan">
+  <header>
+    <nav>
+        <ul>
+            <li><a href="home" id="home-link">Home</a></li>
+            <style>
+              a {
+                position: absolute; 
+                top: 15px; 
+                right: 20px; 
+              }
+            </style>
+        </ul>
+    </nav>
+  </header>
   <form action="login" method="post">
     {% csrf_token %}
-    <tr>
-      <td>
-        username :
-      </td>
-      <td>
-        <input type="username" placeholder="username" name="username"> 
-      </td>
-    </tr>
-    <tr>
-      <td>
-        password :
-      </td>
-      <td>
-        <input type="password" placeholder="password" name="password"> 
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="submit" name="submit" value="submit">
-      </td>
-    </tr>
+    {{ form.as_p }}
+    <button type="submit">Login</button>
   </form>
 </body>
 </html>

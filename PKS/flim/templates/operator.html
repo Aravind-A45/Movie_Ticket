@@ -3,25 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Red Bus App</title>  <style>
-    body {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50vh;
-        background-color: violet;
-    }
-
-    #content {
-        text-align: center;
-        font-size: 24px;
-    }
-</style>
-
+  <title>Red Bus App</title>  
 </head>
-<body>
+<body bgcolor="cyan">
+  <h1>OPERATOR DETAILS</h1>
+  <li>01-Ramesh-9789678909-gandhi_street</li>
+  <li>02-Ravi-9789678910-nehru_street</li>
+  <li>03-Vicky-9789678911-bose_street</li>
   <form method="post">
     {% csrf_token %}
     <table>
@@ -38,7 +26,7 @@
           Operator_name :
         </td>
         <td>
-          <input type="text" placeholder="Operator_name" name="Opn"> 
+          <input type="text" placeholder="Operator_name" name="Operator_name"> 
         </td>
       </tr>
       <tr>

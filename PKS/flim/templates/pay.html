@@ -3,25 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Red Bus App</title>  <style>
-    body {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50vh;
-        background-color: violet;
-    }
-
-    #content {
-        text-align: center;
-        font-size: 24px;
-    }
-</style>
-
+  <title>Red Bus App</title> 
 </head>
-<body>
+<body bgcolor="cyan">
   <form method="post">
     {% csrf_token %}
     <table>
@@ -30,7 +14,7 @@
           Payment_id :
         </td>
         <td>
-          <input type="number" placeholder="Payment_id" name="Payid">
+          <input type="number" placeholder="Payment_id" name="Payment_id">
         </td>
       </tr>
       <tr>
@@ -38,7 +22,7 @@
           Booking_id :
         </td>
         <td>
-          <input type="number" placeholder="Booking_id" name="Bookid"> 
+          <input type="number" placeholder="Booking_id" name="Booking_id"> 
         </td>
       </tr>
       <tr>
@@ -46,7 +30,7 @@
           Payment_date :
         </td>
         <td>
-          <input type="date" placeholder="Payment_date" name="Pdate"> 
+          <input type="date" placeholder="Payment_date" name="Payment_date"> 
         </td>
       </tr>
       <tr>
@@ -54,7 +38,7 @@
           Amount :
         </td>
         <td>
-          <input type="number" placeholder="Amount" name="Amt"> 
+          <input type="number" placeholder="Amount" name="Amount"> 
         </td>
       </tr>
       <tr>
@@ -62,7 +46,7 @@
           Payment_status :
         </td>
         <td>
-          <input type="text" placeholder="Payment_status" name="Pay_sts"> 
+          <input type="text" placeholder="Payment_status" name="Payment_status"> 
         </td>
       </tr>
       <tr>

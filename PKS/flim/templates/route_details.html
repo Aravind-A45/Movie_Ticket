@@ -3,26 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Red Bus App</title>  <style>
-    body {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50vh;
-        background-color: violet;
-    }
-
-    #content {
-        text-align: center;
-        font-size: 24px;
-    }
-</style>
-
+  <title>Red Bus App</title> 
 </head>
-<body>
+<body bgcolor="cyan">
   <form method="post">
+    <h1>ROUTE DETAILS</h1>
+    <li>01-Tirunelveli-Coimbatore-500km</li>
+    <li>02-Salem-Trichy-400km</li>
+    <li>03-Chennai-Kanyakumari-1200km</li>
+    <li>04-Chennai-Coimbatore-400km</li>
+    <li>05-Trichy-Tirunelveli-350km</li>
+    <li>06-Salem-Kanyakumari-800km</li>
     {% csrf_token %}
     <table>
       <tr>
@@ -30,7 +21,7 @@
           Route_id :
         </td>
         <td>
-          <input type="number" placeholder="Route_id" name="Rid">
+          <input type="number" placeholder="Route_id" name="Route_id">
         </td>
       </tr>
       <tr>
